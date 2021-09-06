@@ -1,13 +1,23 @@
 <?php
 
-/** Create a function that returns true if a string contains any spaces. */
+/** Take an array of integers (positive or negative or both) and return the sum of
+ * the absolute value of each element.
+ */
 
-function hasSpaces($str) {
+function getAbsSum($arr) {
 
-    if ($str[0] == " ") return  true;
-   return strpos($str," ") ? true : false;
+    $arrNum = [];
 
+    foreach ($arr as $item){
+        if ($item <= 0){
+          $item = $item * -1;
+        }
+
+        $arrNum[]=$item;
+    }
+
+    return array_sum($arrNum);
 }
 
 echo "<pre>";
-die(var_dump(hasSpaces("mamad")));
+die(var_dump(getAbsSum([1,2,-3,-4])));
