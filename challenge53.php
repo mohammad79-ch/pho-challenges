@@ -13,6 +13,17 @@ function secondLargest($a) {
     return $max;
 }
 
+// second methods to slove
+
+//function secondLargest($a) {
+//     rsort($a);
+//
+//     array_shift($a);
+//
+//
+//     return $a[0];
+//}
+
 
 echo "<pre>";
-die(var_dump(secondLargest([5,4,7,9,555])));
+die(var_dump(secondLargest([5,4,7,12,9,64,555])));
