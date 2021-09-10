@@ -8,7 +8,7 @@
 function findBob($names) {
 
    $bobIndex = array_search('Bob',$names);
-   
+
    return  is_integer($bobIndex) ? "Index ". $bobIndex : -1;
 }
 
